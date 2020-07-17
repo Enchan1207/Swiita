@@ -8,7 +8,7 @@
 
 import Foundation
 
-public extension Swiita {
+extension Swiita {
     // 汎用APIリクエスト
     internal func apiRequest(
         token: String? = nil,
@@ -49,7 +49,7 @@ public extension Swiita {
             if error == nil {
                 let responseString = String(data: data!, encoding: .utf8) ?? "{}"
                 let statusCode = (response as? HTTPURLResponse)?.typeOfStatusCode()
-                success?(statusCode ?? .Invalid, responseString)
+                success?(statusCode ?? .Invalid, JSONObject(responseString.data(using: .utf8)))
             }else{
                 failure?(error!)
             }

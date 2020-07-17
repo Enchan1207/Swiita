@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		9E0A06B924C1E0E800B828E5 /* SwiitaStock.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E0A06B824C1E0E800B828E5 /* SwiitaStock.swift */; };
+		9E0A06BB24C1E13000B828E5 /* JSONObject.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E0A06BA24C1E13000B828E5 /* JSONObject.swift */; };
 		9EC02F5C24C1D8ED00D9D077 /* Swiita.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9EC02F5224C1D8EC00D9D077 /* Swiita.framework */; };
 		9EC02F6124C1D8ED00D9D077 /* SwiitaTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9EC02F6024C1D8ED00D9D077 /* SwiitaTests.swift */; };
 		9EC02F6324C1D8ED00D9D077 /* Swiita.h in Headers */ = {isa = PBXBuildFile; fileRef = 9EC02F5524C1D8EC00D9D077 /* Swiita.h */; settings = {ATTRIBUTES = (Public, ); }; };
@@ -34,6 +36,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		9E0A06B824C1E0E800B828E5 /* SwiitaStock.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwiitaStock.swift; sourceTree = "<group>"; };
+		9E0A06BA24C1E13000B828E5 /* JSONObject.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JSONObject.swift; sourceTree = "<group>"; };
 		9EC02F5224C1D8EC00D9D077 /* Swiita.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Swiita.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		9EC02F5524C1D8EC00D9D077 /* Swiita.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Swiita.h; sourceTree = "<group>"; };
 		9EC02F5624C1D8EC00D9D077 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -98,6 +102,8 @@
 				9EC02F5524C1D8EC00D9D077 /* Swiita.h */,
 				9EC02F6C24C1DAA000D9D077 /* Swiita.swift */,
 				9EC02F9924C1DC8200D9D077 /* SwiitaAPIRequest.swift */,
+				9E0A06B824C1E0E800B828E5 /* SwiitaStock.swift */,
+				9E0A06BA24C1E13000B828E5 /* JSONObject.swift */,
 				9EC02F9824C1DC8200D9D077 /* SwiitaAuth.swift */,
 				9EC02F9724C1DBE800D9D077 /* enums */,
 				9EC02F9624C1DBDC00D9D077 /* Extensions */,
@@ -248,11 +254,13 @@
 			buildActionMask = 2147483647;
 			files = (
 				9EC02F9024C1DBCB00D9D077 /* HTTPMethod.swift in Sources */,
+				9E0A06B924C1E0E800B828E5 /* SwiitaStock.swift in Sources */,
 				9EC02F9324C1DBCB00D9D077 /* SwiitaCommentStruct.swift in Sources */,
 				9EC02F9B24C1DC8200D9D077 /* SwiitaAPIRequest.swift in Sources */,
 				9EC02F9124C1DBCB00D9D077 /* NotificationExt.swift in Sources */,
 				9EC02F8F24C1DBCB00D9D077 /* HTTPStatusType.swift in Sources */,
 				9EC02F9A24C1DC8200D9D077 /* SwiitaAuth.swift in Sources */,
+				9E0A06BB24C1E13000B828E5 /* JSONObject.swift in Sources */,
 				9EC02F9524C1DBCB00D9D077 /* StringExt.swift in Sources */,
 				9EC02F6D24C1DAA000D9D077 /* Swiita.swift in Sources */,
 				9EC02F9224C1DBCB00D9D077 /* SwiitaAuthority.swift in Sources */,
@@ -420,6 +428,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = EnchantCode.Swiita;
 				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
 				SKIP_INSTALL = YES;
+				SUPPORTS_MACCATALYST = NO;
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -446,6 +455,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = EnchantCode.Swiita;
 				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
 				SKIP_INSTALL = YES;
+				SUPPORTS_MACCATALYST = NO;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};

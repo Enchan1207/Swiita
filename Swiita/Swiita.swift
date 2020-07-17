@@ -10,7 +10,7 @@ import Foundation
 import SafariServices
 
 public class Swiita{
-    public typealias SuccessCallback = (_ statusCode: HTTPStatusType, _ response: String) -> Void
+    public typealias SuccessCallback = (_ statusCode: HTTPStatusType, _ response: JSONObject) -> Void
     public typealias FailCallback = (_ error: Error) -> Void
     
     internal let clientid: String
