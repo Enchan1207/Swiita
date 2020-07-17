@@ -10,6 +10,17 @@
 		9EC02F5C24C1D8ED00D9D077 /* Swiita.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9EC02F5224C1D8EC00D9D077 /* Swiita.framework */; };
 		9EC02F6124C1D8ED00D9D077 /* SwiitaTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9EC02F6024C1D8ED00D9D077 /* SwiitaTests.swift */; };
 		9EC02F6324C1D8ED00D9D077 /* Swiita.h in Headers */ = {isa = PBXBuildFile; fileRef = 9EC02F5524C1D8EC00D9D077 /* Swiita.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		9EC02F6D24C1DAA000D9D077 /* Swiita.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9EC02F6C24C1DAA000D9D077 /* Swiita.swift */; };
+		9EC02F8E24C1DBCB00D9D077 /* URLExt.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9EC02F8624C1DBCA00D9D077 /* URLExt.swift */; };
+		9EC02F8F24C1DBCB00D9D077 /* HTTPStatusType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9EC02F8724C1DBCB00D9D077 /* HTTPStatusType.swift */; };
+		9EC02F9024C1DBCB00D9D077 /* HTTPMethod.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9EC02F8824C1DBCB00D9D077 /* HTTPMethod.swift */; };
+		9EC02F9124C1DBCB00D9D077 /* NotificationExt.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9EC02F8924C1DBCB00D9D077 /* NotificationExt.swift */; };
+		9EC02F9224C1DBCB00D9D077 /* SwiitaAuthority.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9EC02F8A24C1DBCB00D9D077 /* SwiitaAuthority.swift */; };
+		9EC02F9324C1DBCB00D9D077 /* SwiitaCommentStruct.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9EC02F8B24C1DBCB00D9D077 /* SwiitaCommentStruct.swift */; };
+		9EC02F9424C1DBCB00D9D077 /* HTTPURLResponseExt.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9EC02F8C24C1DBCB00D9D077 /* HTTPURLResponseExt.swift */; };
+		9EC02F9524C1DBCB00D9D077 /* StringExt.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9EC02F8D24C1DBCB00D9D077 /* StringExt.swift */; };
+		9EC02F9A24C1DC8200D9D077 /* SwiitaAuth.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9EC02F9824C1DC8200D9D077 /* SwiitaAuth.swift */; };
+		9EC02F9B24C1DC8200D9D077 /* SwiitaAPIRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9EC02F9924C1DC8200D9D077 /* SwiitaAPIRequest.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -29,6 +40,18 @@
 		9EC02F5B24C1D8ED00D9D077 /* SwiitaTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SwiitaTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		9EC02F6024C1D8ED00D9D077 /* SwiitaTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwiitaTests.swift; sourceTree = "<group>"; };
 		9EC02F6224C1D8ED00D9D077 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		9EC02F6C24C1DAA000D9D077 /* Swiita.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Swiita.swift; sourceTree = "<group>"; };
+		9EC02F8624C1DBCA00D9D077 /* URLExt.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = URLExt.swift; sourceTree = "<group>"; };
+		9EC02F8724C1DBCB00D9D077 /* HTTPStatusType.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HTTPStatusType.swift; sourceTree = "<group>"; };
+		9EC02F8824C1DBCB00D9D077 /* HTTPMethod.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HTTPMethod.swift; sourceTree = "<group>"; };
+		9EC02F8924C1DBCB00D9D077 /* NotificationExt.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NotificationExt.swift; sourceTree = "<group>"; };
+		9EC02F8A24C1DBCB00D9D077 /* SwiitaAuthority.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SwiitaAuthority.swift; sourceTree = "<group>"; };
+		9EC02F8B24C1DBCB00D9D077 /* SwiitaCommentStruct.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SwiitaCommentStruct.swift; sourceTree = "<group>"; };
+		9EC02F8C24C1DBCB00D9D077 /* HTTPURLResponseExt.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HTTPURLResponseExt.swift; sourceTree = "<group>"; };
+		9EC02F8D24C1DBCB00D9D077 /* StringExt.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StringExt.swift; sourceTree = "<group>"; };
+		9EC02F9824C1DC8200D9D077 /* SwiitaAuth.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SwiitaAuth.swift; sourceTree = "<group>"; };
+		9EC02F9924C1DC8200D9D077 /* SwiitaAPIRequest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SwiitaAPIRequest.swift; sourceTree = "<group>"; };
+		9EC02F9C24C1DD1400D9D077 /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -53,6 +76,7 @@
 		9EC02F4824C1D8EC00D9D077 = {
 			isa = PBXGroup;
 			children = (
+				9EC02F9C24C1DD1400D9D077 /* README.md */,
 				9EC02F5424C1D8EC00D9D077 /* Swiita */,
 				9EC02F5F24C1D8ED00D9D077 /* SwiitaTests */,
 				9EC02F5324C1D8EC00D9D077 /* Products */,
@@ -72,6 +96,11 @@
 			isa = PBXGroup;
 			children = (
 				9EC02F5524C1D8EC00D9D077 /* Swiita.h */,
+				9EC02F6C24C1DAA000D9D077 /* Swiita.swift */,
+				9EC02F9924C1DC8200D9D077 /* SwiitaAPIRequest.swift */,
+				9EC02F9824C1DC8200D9D077 /* SwiitaAuth.swift */,
+				9EC02F9724C1DBE800D9D077 /* enums */,
+				9EC02F9624C1DBDC00D9D077 /* Extensions */,
 				9EC02F5624C1D8EC00D9D077 /* Info.plist */,
 			);
 			path = Swiita;
@@ -84,6 +113,28 @@
 				9EC02F6224C1D8ED00D9D077 /* Info.plist */,
 			);
 			path = SwiitaTests;
+			sourceTree = "<group>";
+		};
+		9EC02F9624C1DBDC00D9D077 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				9EC02F8624C1DBCA00D9D077 /* URLExt.swift */,
+				9EC02F8C24C1DBCB00D9D077 /* HTTPURLResponseExt.swift */,
+				9EC02F8924C1DBCB00D9D077 /* NotificationExt.swift */,
+				9EC02F8D24C1DBCB00D9D077 /* StringExt.swift */,
+				9EC02F8B24C1DBCB00D9D077 /* SwiitaCommentStruct.swift */,
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
+		9EC02F9724C1DBE800D9D077 /* enums */ = {
+			isa = PBXGroup;
+			children = (
+				9EC02F8824C1DBCB00D9D077 /* HTTPMethod.swift */,
+				9EC02F8724C1DBCB00D9D077 /* HTTPStatusType.swift */,
+				9EC02F8A24C1DBCB00D9D077 /* SwiitaAuthority.swift */,
+			);
+			path = enums;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -148,6 +199,7 @@
 				TargetAttributes = {
 					9EC02F5124C1D8EC00D9D077 = {
 						CreatedOnToolsVersion = 11.5;
+						LastSwiftMigration = 1150;
 					};
 					9EC02F5A24C1D8ED00D9D077 = {
 						CreatedOnToolsVersion = 11.5;
@@ -195,6 +247,17 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				9EC02F9024C1DBCB00D9D077 /* HTTPMethod.swift in Sources */,
+				9EC02F9324C1DBCB00D9D077 /* SwiitaCommentStruct.swift in Sources */,
+				9EC02F9B24C1DC8200D9D077 /* SwiitaAPIRequest.swift in Sources */,
+				9EC02F9124C1DBCB00D9D077 /* NotificationExt.swift in Sources */,
+				9EC02F8F24C1DBCB00D9D077 /* HTTPStatusType.swift in Sources */,
+				9EC02F9A24C1DC8200D9D077 /* SwiitaAuth.swift in Sources */,
+				9EC02F9524C1DBCB00D9D077 /* StringExt.swift in Sources */,
+				9EC02F6D24C1DAA000D9D077 /* Swiita.swift in Sources */,
+				9EC02F9224C1DBCB00D9D077 /* SwiitaAuthority.swift in Sources */,
+				9EC02F9424C1DBCB00D9D077 /* HTTPURLResponseExt.swift in Sources */,
+				9EC02F8E24C1DBCB00D9D077 /* URLExt.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -340,6 +403,7 @@
 		9EC02F6724C1D8ED00D9D077 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				DEFINES_MODULE = YES;
 				DEVELOPMENT_TEAM = B2RS5LHBZ9;
@@ -356,6 +420,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = EnchantCode.Swiita;
 				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
 				SKIP_INSTALL = YES;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -364,6 +429,7 @@
 		9EC02F6824C1D8ED00D9D077 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				DEFINES_MODULE = YES;
 				DEVELOPMENT_TEAM = B2RS5LHBZ9;
@@ -388,6 +454,7 @@
 		9EC02F6A24C1D8ED00D9D077 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = B2RS5LHBZ9;
 				INFOPLIST_FILE = SwiitaTests/Info.plist;
@@ -406,6 +473,7 @@
 		9EC02F6B24C1D8ED00D9D077 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = B2RS5LHBZ9;
 				INFOPLIST_FILE = SwiitaTests/Info.plist;
