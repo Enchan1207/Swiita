@@ -9,10 +9,25 @@
 			<key>orderHint</key>
 			<integer>1</integer>
 		</dict>
-		<key>SwiitaTestApp.xcscheme_^#shared#^_</key>
+		<key>SwiitaTestApp.xcscheme</key>
 		<dict>
+			<key>isShown</key>
+			<false/>
 			<key>orderHint</key>
 			<integer>0</integer>
+		</dict>
+	</dict>
+	<key>SuppressBuildableAutocreation</key>
+	<dict>
+		<key>9E0A06BF24C1E83E00B828E5</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>9E0A06D424C1E84100B828E5</key>
+		<dict>
+			<key>primary</key>
+			<true/>
 		</dict>
 	</dict>
 </dict>
