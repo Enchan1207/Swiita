@@ -22,7 +22,7 @@ public class Swiita{
     internal var safariViewController: SFSafariViewController!
     internal var notifyProtocol: NSObjectProtocol?
     
-    init(clientid: String, clientsecret: String, apihost: URL? = nil, token: String? = nil){
+    public init(clientid: String, clientsecret: String, apihost: URL? = nil, token: String? = nil){
         self.clientid = clientid
         self.clientsecret = clientsecret
         self.apihost = apihost ?? URL(string: "https://qiita.com")!

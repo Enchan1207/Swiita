@@ -72,8 +72,9 @@ public extension Swiita {
         safariViewController = SFSafariViewController(url: authurl)
         safariViewController.modalPresentationStyle = .automatic
         safariViewController.delegate = safariDelegate
-        
-        presentViewController?.present(safariViewController, animated: true, completion: nil)
+        DispatchQueue.main.async {
+            presentViewController?.present(self.safariViewController, animated: true, completion: nil)
+        }
     }
     
     // code, stateからアクセストークンを引っ張る

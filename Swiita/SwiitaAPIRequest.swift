@@ -49,7 +49,7 @@ extension Swiita {
             if error == nil {
                 let responseString = String(data: data!, encoding: .utf8) ?? "{}"
                 let statusCode = (response as? HTTPURLResponse)?.typeOfStatusCode()
-                success?(statusCode ?? .Invalid, JSONObject(responseString.data(using: .utf8)))
+                success?(statusCode ?? .Invalid, JSONObject(responseString.data(using: .utf8) as Any))
             }else{
                 failure?(error!)
             }

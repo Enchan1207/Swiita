@@ -13,7 +13,6 @@ public enum JSONObject: Equatable {
     case string(String)
     case number(Double)
     case bool(Bool)
-    case url(URL)
     case array(Array<JSONObject>)
     case object(Dictionary<String, JSONObject>)
     case invalid
@@ -25,8 +24,8 @@ public enum JSONObject: Equatable {
         return string
     }
     public var url: URL? {
-        guard case .url(let url) = self else { return nil }
-        return url
+        guard case .string(let url) = self else { return nil }
+        return URL(string: url)
     }
     public var int: Int? {
         guard case .number(let number) = self else { return nil }
@@ -50,28 +49,23 @@ public enum JSONObject: Equatable {
     }
     
     // 配列としてJSONObjectが呼び出された場合
-    subscript(_ index: Int) -> JSONObject {
+    public subscript(_ index: Int) -> JSONObject {
         guard case .array(let array) = self else { return .null }
         return array[index]
     }
     
     // キーバリューとしてJSONObjectが呼び出された場合
-    subscript(_ key: String) -> JSONObject {
+    public subscript(_ key: String) -> JSONObject {
         guard case .object(let object) = self else { return .null }
         return object[key] ?? .null
     }
     
     // 適切な列挙型の値にキャストして返すイニシャライザ
-    init(_ value: Any){
+    public init(_ value: Any){
         switch value {
         //  jsonが扱うデータ型
         case let string as String:
-            // URLとして扱える場合は自動変換
-            guard let url = URL(string: string) else {
-                self = .string(string)
-                return
-            }
-            self = .url(url)
+            self = .string(string)
             
         // 可能なら型キャスト
         case let number as Double:
@@ -108,17 +102,17 @@ public enum JSONObject: Equatable {
     }
     
     // JSON文字列から変換できるように
-    init?(json: String, encoding: String.Encoding = .utf8) {
-        self.init(json.data(using: encoding))
+    public init?(json: String, encoding: String.Encoding = .utf8) {
+        self.init(json.data(using: encoding) as Any)
         if self == .invalid{
             return nil
         }
     }
     
     // JSONEncoderでエンコードした構造体も入力できるように
-    init?<T: Encodable>(json: T, encoding: String.Encoding = .utf8){
+    public init?<T: Encodable>(json: T, encoding: String.Encoding = .utf8){
         guard let encodedObject = try? JSONEncoder().encode(json) else {return nil}
-        self.init(String(data: encodedObject, encoding: encoding))
+        self.init(String(data: encodedObject, encoding: encoding) as Any)
     }
     
 }

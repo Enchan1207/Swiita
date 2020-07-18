@@ -7,8 +7,16 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		9E0A06B924C1E0E800B828E5 /* SwiitaStock.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E0A06B824C1E0E800B828E5 /* SwiitaStock.swift */; };
+		9E0A06B924C1E0E800B828E5 /* SwiitaComment.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E0A06B824C1E0E800B828E5 /* SwiitaComment.swift */; };
 		9E0A06BB24C1E13000B828E5 /* JSONObject.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E0A06BA24C1E13000B828E5 /* JSONObject.swift */; };
+		9E0A06C324C1E83E00B828E5 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E0A06C224C1E83E00B828E5 /* AppDelegate.swift */; };
+		9E0A06C524C1E83E00B828E5 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E0A06C424C1E83E00B828E5 /* SceneDelegate.swift */; };
+		9E0A06C724C1E83E00B828E5 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E0A06C624C1E83E00B828E5 /* ViewController.swift */; };
+		9E0A06CA24C1E83E00B828E5 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9E0A06C824C1E83E00B828E5 /* Main.storyboard */; };
+		9E0A06CC24C1E84100B828E5 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 9E0A06CB24C1E84100B828E5 /* Assets.xcassets */; };
+		9E0A06CF24C1E84100B828E5 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9E0A06CD24C1E84100B828E5 /* LaunchScreen.storyboard */; };
+		9E0A06E324C1E93400B828E5 /* Swiita.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9EC02F5224C1D8EC00D9D077 /* Swiita.framework */; };
+		9E0A06E424C1E93400B828E5 /* Swiita.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 9EC02F5224C1D8EC00D9D077 /* Swiita.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		9EC02F5C24C1D8ED00D9D077 /* Swiita.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9EC02F5224C1D8EC00D9D077 /* Swiita.framework */; };
 		9EC02F6124C1D8ED00D9D077 /* SwiitaTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9EC02F6024C1D8ED00D9D077 /* SwiitaTests.swift */; };
 		9EC02F6324C1D8ED00D9D077 /* Swiita.h in Headers */ = {isa = PBXBuildFile; fileRef = 9EC02F5524C1D8EC00D9D077 /* Swiita.h */; settings = {ATTRIBUTES = (Public, ); }; };
@@ -26,6 +34,20 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
+		9E0A06D624C1E84100B828E5 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 9EC02F4924C1D8EC00D9D077 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 9E0A06BF24C1E83E00B828E5;
+			remoteInfo = SwiitaTestApp;
+		};
+		9E0A06E524C1E93400B828E5 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 9EC02F4924C1D8EC00D9D077 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 9EC02F5124C1D8EC00D9D077;
+			remoteInfo = Swiita;
+		};
 		9EC02F5D24C1D8ED00D9D077 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = 9EC02F4924C1D8EC00D9D077 /* Project object */;
@@ -35,9 +57,32 @@
 		};
 /* End PBXContainerItemProxy section */
 
+/* Begin PBXCopyFilesBuildPhase section */
+		9E0A06E724C1E93500B828E5 /* Embed Frameworks */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				9E0A06E424C1E93400B828E5 /* Swiita.framework in Embed Frameworks */,
+			);
+			name = "Embed Frameworks";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
 /* Begin PBXFileReference section */
-		9E0A06B824C1E0E800B828E5 /* SwiitaStock.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwiitaStock.swift; sourceTree = "<group>"; };
+		9E0A06B824C1E0E800B828E5 /* SwiitaComment.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwiitaComment.swift; sourceTree = "<group>"; };
 		9E0A06BA24C1E13000B828E5 /* JSONObject.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JSONObject.swift; sourceTree = "<group>"; };
+		9E0A06C024C1E83E00B828E5 /* SwiitaTestApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SwiitaTestApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		9E0A06C224C1E83E00B828E5 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		9E0A06C424C1E83E00B828E5 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
+		9E0A06C624C1E83E00B828E5 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		9E0A06C924C1E83E00B828E5 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		9E0A06CB24C1E84100B828E5 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		9E0A06CE24C1E84100B828E5 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		9E0A06D024C1E84100B828E5 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		9E0A06D524C1E84100B828E5 /* SwiitaTestAppTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SwiitaTestAppTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		9EC02F5224C1D8EC00D9D077 /* Swiita.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Swiita.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		9EC02F5524C1D8EC00D9D077 /* Swiita.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Swiita.h; sourceTree = "<group>"; };
 		9EC02F5624C1D8EC00D9D077 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -59,6 +104,21 @@
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
+		9E0A06BD24C1E83E00B828E5 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				9E0A06E324C1E93400B828E5 /* Swiita.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		9E0A06D224C1E84100B828E5 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		9EC02F4F24C1D8EC00D9D077 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
@@ -77,13 +137,36 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		9E0A06C124C1E83E00B828E5 /* SwiitaTestApp */ = {
+			isa = PBXGroup;
+			children = (
+				9E0A06C224C1E83E00B828E5 /* AppDelegate.swift */,
+				9E0A06C424C1E83E00B828E5 /* SceneDelegate.swift */,
+				9E0A06C624C1E83E00B828E5 /* ViewController.swift */,
+				9E0A06C824C1E83E00B828E5 /* Main.storyboard */,
+				9E0A06CB24C1E84100B828E5 /* Assets.xcassets */,
+				9E0A06CD24C1E84100B828E5 /* LaunchScreen.storyboard */,
+				9E0A06D024C1E84100B828E5 /* Info.plist */,
+			);
+			path = SwiitaTestApp;
+			sourceTree = "<group>";
+		};
+		9E0A06E224C1E93400B828E5 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		9EC02F4824C1D8EC00D9D077 = {
 			isa = PBXGroup;
 			children = (
 				9EC02F9C24C1DD1400D9D077 /* README.md */,
 				9EC02F5424C1D8EC00D9D077 /* Swiita */,
 				9EC02F5F24C1D8ED00D9D077 /* SwiitaTests */,
+				9E0A06C124C1E83E00B828E5 /* SwiitaTestApp */,
 				9EC02F5324C1D8EC00D9D077 /* Products */,
+				9E0A06E224C1E93400B828E5 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -92,6 +175,8 @@
 			children = (
 				9EC02F5224C1D8EC00D9D077 /* Swiita.framework */,
 				9EC02F5B24C1D8ED00D9D077 /* SwiitaTests.xctest */,
+				9E0A06C024C1E83E00B828E5 /* SwiitaTestApp.app */,
+				9E0A06D524C1E84100B828E5 /* SwiitaTestAppTests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -102,7 +187,7 @@
 				9EC02F5524C1D8EC00D9D077 /* Swiita.h */,
 				9EC02F6C24C1DAA000D9D077 /* Swiita.swift */,
 				9EC02F9924C1DC8200D9D077 /* SwiitaAPIRequest.swift */,
-				9E0A06B824C1E0E800B828E5 /* SwiitaStock.swift */,
+				9E0A06B824C1E0E800B828E5 /* SwiitaComment.swift */,
 				9E0A06BA24C1E13000B828E5 /* JSONObject.swift */,
 				9EC02F9824C1DC8200D9D077 /* SwiitaAuth.swift */,
 				9EC02F9724C1DBE800D9D077 /* enums */,
@@ -157,6 +242,43 @@
 /* End PBXHeadersBuildPhase section */
 
 /* Begin PBXNativeTarget section */
+		9E0A06BF24C1E83E00B828E5 /* SwiitaTestApp */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 9E0A06DC24C1E84100B828E5 /* Build configuration list for PBXNativeTarget "SwiitaTestApp" */;
+			buildPhases = (
+				9E0A06BC24C1E83E00B828E5 /* Sources */,
+				9E0A06BD24C1E83E00B828E5 /* Frameworks */,
+				9E0A06BE24C1E83E00B828E5 /* Resources */,
+				9E0A06E724C1E93500B828E5 /* Embed Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				9E0A06E624C1E93400B828E5 /* PBXTargetDependency */,
+			);
+			name = SwiitaTestApp;
+			productName = SwiitaTestApp;
+			productReference = 9E0A06C024C1E83E00B828E5 /* SwiitaTestApp.app */;
+			productType = "com.apple.product-type.application";
+		};
+		9E0A06D424C1E84100B828E5 /* SwiitaTestAppTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 9E0A06DF24C1E84100B828E5 /* Build configuration list for PBXNativeTarget "SwiitaTestAppTests" */;
+			buildPhases = (
+				9E0A06D124C1E84100B828E5 /* Sources */,
+				9E0A06D224C1E84100B828E5 /* Frameworks */,
+				9E0A06D324C1E84100B828E5 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				9E0A06D724C1E84100B828E5 /* PBXTargetDependency */,
+			);
+			name = SwiitaTestAppTests;
+			productName = SwiitaTestAppTests;
+			productReference = 9E0A06D524C1E84100B828E5 /* SwiitaTestAppTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
 		9EC02F5124C1D8EC00D9D077 /* Swiita */ = {
 			isa = PBXNativeTarget;
 			buildConfigurationList = 9EC02F6624C1D8ED00D9D077 /* Build configuration list for PBXNativeTarget "Swiita" */;
@@ -203,6 +325,13 @@
 				LastUpgradeCheck = 1150;
 				ORGANIZATIONNAME = EnchantCode;
 				TargetAttributes = {
+					9E0A06BF24C1E83E00B828E5 = {
+						CreatedOnToolsVersion = 11.5;
+					};
+					9E0A06D424C1E84100B828E5 = {
+						CreatedOnToolsVersion = 11.5;
+						TestTargetID = 9E0A06BF24C1E83E00B828E5;
+					};
 					9EC02F5124C1D8EC00D9D077 = {
 						CreatedOnToolsVersion = 11.5;
 						LastSwiftMigration = 1150;
@@ -227,11 +356,30 @@
 			targets = (
 				9EC02F5124C1D8EC00D9D077 /* Swiita */,
 				9EC02F5A24C1D8ED00D9D077 /* SwiitaTests */,
+				9E0A06BF24C1E83E00B828E5 /* SwiitaTestApp */,
+				9E0A06D424C1E84100B828E5 /* SwiitaTestAppTests */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
+		9E0A06BE24C1E83E00B828E5 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				9E0A06CF24C1E84100B828E5 /* LaunchScreen.storyboard in Resources */,
+				9E0A06CC24C1E84100B828E5 /* Assets.xcassets in Resources */,
+				9E0A06CA24C1E83E00B828E5 /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		9E0A06D324C1E84100B828E5 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		9EC02F5024C1D8EC00D9D077 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -249,12 +397,29 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
+		9E0A06BC24C1E83E00B828E5 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				9E0A06C724C1E83E00B828E5 /* ViewController.swift in Sources */,
+				9E0A06C324C1E83E00B828E5 /* AppDelegate.swift in Sources */,
+				9E0A06C524C1E83E00B828E5 /* SceneDelegate.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		9E0A06D124C1E84100B828E5 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		9EC02F4E24C1D8EC00D9D077 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 				9EC02F9024C1DBCB00D9D077 /* HTTPMethod.swift in Sources */,
-				9E0A06B924C1E0E800B828E5 /* SwiitaStock.swift in Sources */,
+				9E0A06B924C1E0E800B828E5 /* SwiitaComment.swift in Sources */,
 				9EC02F9324C1DBCB00D9D077 /* SwiitaCommentStruct.swift in Sources */,
 				9EC02F9B24C1DC8200D9D077 /* SwiitaAPIRequest.swift in Sources */,
 				9EC02F9124C1DBCB00D9D077 /* NotificationExt.swift in Sources */,
@@ -280,6 +445,16 @@
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
+		9E0A06D724C1E84100B828E5 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 9E0A06BF24C1E83E00B828E5 /* SwiitaTestApp */;
+			targetProxy = 9E0A06D624C1E84100B828E5 /* PBXContainerItemProxy */;
+		};
+		9E0A06E624C1E93400B828E5 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 9EC02F5124C1D8EC00D9D077 /* Swiita */;
+			targetProxy = 9E0A06E524C1E93400B828E5 /* PBXContainerItemProxy */;
+		};
 		9EC02F5E24C1D8ED00D9D077 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			target = 9EC02F5124C1D8EC00D9D077 /* Swiita */;
@@ -287,7 +462,106 @@
 		};
 /* End PBXTargetDependency section */
 
+/* Begin PBXVariantGroup section */
+		9E0A06C824C1E83E00B828E5 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				9E0A06C924C1E83E00B828E5 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		9E0A06CD24C1E84100B828E5 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				9E0A06CE24C1E84100B828E5 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
 /* Begin XCBuildConfiguration section */
+		9E0A06DD24C1E84100B828E5 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = B2RS5LHBZ9;
+				INFOPLIST_FILE = SwiitaTestApp/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = EnchantCode.SwiitaTestApp;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		9E0A06DE24C1E84100B828E5 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = B2RS5LHBZ9;
+				INFOPLIST_FILE = SwiitaTestApp/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = EnchantCode.SwiitaTestApp;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		9E0A06E024C1E84100B828E5 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = B2RS5LHBZ9;
+				INFOPLIST_FILE = SwiitaTestAppTests/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.5;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = EnchantCode.SwiitaTestAppTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/SwiitaTestApp.app/SwiitaTestApp";
+			};
+			name = Debug;
+		};
+		9E0A06E124C1E84100B828E5 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = B2RS5LHBZ9;
+				INFOPLIST_FILE = SwiitaTestAppTests/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.5;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = EnchantCode.SwiitaTestAppTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/SwiitaTestApp.app/SwiitaTestApp";
+			};
+			name = Release;
+		};
 		9EC02F6424C1D8ED00D9D077 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -502,6 +776,24 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
+		9E0A06DC24C1E84100B828E5 /* Build configuration list for PBXNativeTarget "SwiitaTestApp" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				9E0A06DD24C1E84100B828E5 /* Debug */,
+				9E0A06DE24C1E84100B828E5 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		9E0A06DF24C1E84100B828E5 /* Build configuration list for PBXNativeTarget "SwiitaTestAppTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				9E0A06E024C1E84100B828E5 /* Debug */,
+				9E0A06E124C1E84100B828E5 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
 		9EC02F4C24C1D8EC00D9D077 /* Build configuration list for PBXProject "Swiita" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
