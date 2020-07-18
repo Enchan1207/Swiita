@@ -38,7 +38,7 @@ public extension Swiita {
     ///     - content: updated comment content.
     func updateComment (
         commentID: String,
-        content: Stirng,
+        content: String,
         success: SuccessCallback? = nil,
         failure: FailCallback? = nil){
         let commentBody = "{ \"body\": \"\(content)\"}"
@@ -62,7 +62,7 @@ public extension Swiita {
     ///     - content: post comment content.
     func postComment (
         itemID: String,
-        content: String.
+        content: String,
         success: SuccessCallback? = nil,
         failure: FailCallback? = nil){
         let commentBody = "{ \"body\": \"\(content)\"}"

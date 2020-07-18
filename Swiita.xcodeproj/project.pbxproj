@@ -17,6 +17,13 @@
 		9E0A06CF24C1E84100B828E5 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9E0A06CD24C1E84100B828E5 /* LaunchScreen.storyboard */; };
 		9E0A06E324C1E93400B828E5 /* Swiita.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9EC02F5224C1D8EC00D9D077 /* Swiita.framework */; };
 		9E0A06E424C1E93400B828E5 /* Swiita.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 9EC02F5224C1D8EC00D9D077 /* Swiita.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		9E2B6D2524C2A9FC001206FD /* SwiitaUser.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E2B6D2424C2A9FC001206FD /* SwiitaUser.swift */; };
+		9E2B6D2724C2ADB2001206FD /* SwiitaItems.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E2B6D2624C2ADB2001206FD /* SwiitaItems.swift */; };
+		9E2B6D2924C2EA52001206FD /* SwiitaArticle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E2B6D2824C2EA52001206FD /* SwiitaArticle.swift */; };
+		9E2B6D2B24C2EA8B001206FD /* SwiitaTag.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E2B6D2A24C2EA8B001206FD /* SwiitaTag.swift */; };
+		9E2B6D2D24C3268A001206FD /* SwiitaLikes.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E2B6D2C24C3268A001206FD /* SwiitaLikes.swift */; };
+		9E2B6D2F24C327B2001206FD /* SwiitaStock.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E2B6D2E24C327B2001206FD /* SwiitaStock.swift */; };
+		9E2B6D3124C329DD001206FD /* SwiitaTags.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E2B6D3024C329DD001206FD /* SwiitaTags.swift */; };
 		9EC02F5C24C1D8ED00D9D077 /* Swiita.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9EC02F5224C1D8EC00D9D077 /* Swiita.framework */; };
 		9EC02F6124C1D8ED00D9D077 /* SwiitaTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9EC02F6024C1D8ED00D9D077 /* SwiitaTests.swift */; };
 		9EC02F6324C1D8ED00D9D077 /* Swiita.h in Headers */ = {isa = PBXBuildFile; fileRef = 9EC02F5524C1D8EC00D9D077 /* Swiita.h */; settings = {ATTRIBUTES = (Public, ); }; };
@@ -83,6 +90,13 @@
 		9E0A06CE24C1E84100B828E5 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		9E0A06D024C1E84100B828E5 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		9E0A06D524C1E84100B828E5 /* SwiitaTestAppTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SwiitaTestAppTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		9E2B6D2424C2A9FC001206FD /* SwiitaUser.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwiitaUser.swift; sourceTree = "<group>"; };
+		9E2B6D2624C2ADB2001206FD /* SwiitaItems.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwiitaItems.swift; sourceTree = "<group>"; };
+		9E2B6D2824C2EA52001206FD /* SwiitaArticle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwiitaArticle.swift; sourceTree = "<group>"; };
+		9E2B6D2A24C2EA8B001206FD /* SwiitaTag.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwiitaTag.swift; sourceTree = "<group>"; };
+		9E2B6D2C24C3268A001206FD /* SwiitaLikes.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwiitaLikes.swift; sourceTree = "<group>"; };
+		9E2B6D2E24C327B2001206FD /* SwiitaStock.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwiitaStock.swift; sourceTree = "<group>"; };
+		9E2B6D3024C329DD001206FD /* SwiitaTags.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwiitaTags.swift; sourceTree = "<group>"; };
 		9EC02F5224C1D8EC00D9D077 /* Swiita.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Swiita.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		9EC02F5524C1D8EC00D9D077 /* Swiita.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Swiita.h; sourceTree = "<group>"; };
 		9EC02F5624C1D8EC00D9D077 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -188,9 +202,14 @@
 				9EC02F6C24C1DAA000D9D077 /* Swiita.swift */,
 				9EC02F9924C1DC8200D9D077 /* SwiitaAPIRequest.swift */,
 				9E0A06B824C1E0E800B828E5 /* SwiitaComment.swift */,
+				9E2B6D2424C2A9FC001206FD /* SwiitaUser.swift */,
+				9E2B6D2624C2ADB2001206FD /* SwiitaItems.swift */,
+				9E2B6D2C24C3268A001206FD /* SwiitaLikes.swift */,
+				9E2B6D2E24C327B2001206FD /* SwiitaStock.swift */,
+				9E2B6D3024C329DD001206FD /* SwiitaTags.swift */,
 				9E0A06BA24C1E13000B828E5 /* JSONObject.swift */,
 				9EC02F9824C1DC8200D9D077 /* SwiitaAuth.swift */,
-				9EC02F9724C1DBE800D9D077 /* enums */,
+				9EC02F9724C1DBE800D9D077 /* enums, Structs */,
 				9EC02F9624C1DBDC00D9D077 /* Extensions */,
 				9EC02F5624C1D8EC00D9D077 /* Info.plist */,
 			);
@@ -218,14 +237,16 @@
 			path = Extensions;
 			sourceTree = "<group>";
 		};
-		9EC02F9724C1DBE800D9D077 /* enums */ = {
+		9EC02F9724C1DBE800D9D077 /* enums, Structs */ = {
 			isa = PBXGroup;
 			children = (
 				9EC02F8824C1DBCB00D9D077 /* HTTPMethod.swift */,
 				9EC02F8724C1DBCB00D9D077 /* HTTPStatusType.swift */,
 				9EC02F8A24C1DBCB00D9D077 /* SwiitaAuthority.swift */,
+				9E2B6D2824C2EA52001206FD /* SwiitaArticle.swift */,
+				9E2B6D2A24C2EA8B001206FD /* SwiitaTag.swift */,
 			);
-			path = enums;
+			path = "enums, Structs";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -419,15 +440,22 @@
 			buildActionMask = 2147483647;
 			files = (
 				9EC02F9024C1DBCB00D9D077 /* HTTPMethod.swift in Sources */,
+				9E2B6D2524C2A9FC001206FD /* SwiitaUser.swift in Sources */,
 				9E0A06B924C1E0E800B828E5 /* SwiitaComment.swift in Sources */,
 				9EC02F9324C1DBCB00D9D077 /* SwiitaCommentStruct.swift in Sources */,
 				9EC02F9B24C1DC8200D9D077 /* SwiitaAPIRequest.swift in Sources */,
 				9EC02F9124C1DBCB00D9D077 /* NotificationExt.swift in Sources */,
 				9EC02F8F24C1DBCB00D9D077 /* HTTPStatusType.swift in Sources */,
+				9E2B6D2724C2ADB2001206FD /* SwiitaItems.swift in Sources */,
 				9EC02F9A24C1DC8200D9D077 /* SwiitaAuth.swift in Sources */,
+				9E2B6D2B24C2EA8B001206FD /* SwiitaTag.swift in Sources */,
 				9E0A06BB24C1E13000B828E5 /* JSONObject.swift in Sources */,
+				9E2B6D3124C329DD001206FD /* SwiitaTags.swift in Sources */,
 				9EC02F9524C1DBCB00D9D077 /* StringExt.swift in Sources */,
 				9EC02F6D24C1DAA000D9D077 /* Swiita.swift in Sources */,
+				9E2B6D2D24C3268A001206FD /* SwiitaLikes.swift in Sources */,
+				9E2B6D2924C2EA52001206FD /* SwiitaArticle.swift in Sources */,
+				9E2B6D2F24C327B2001206FD /* SwiitaStock.swift in Sources */,
 				9EC02F9224C1DBCB00D9D077 /* SwiitaAuthority.swift in Sources */,
 				9EC02F9424C1DBCB00D9D077 /* HTTPURLResponseExt.swift in Sources */,
 				9EC02F8E24C1DBCB00D9D077 /* URLExt.swift in Sources */,
