@@ -47,8 +47,7 @@ swiita.authorize(presentViewController: self, authority: [.read], success: { (to
 ```
 
 In "authority", you can set access tokens authority.  
-It only accepts value of type `QiitaAPIAuthority`.  
-([SwiitaAuthority.swift](https://github.com/Enchan1207/Swiita/blob/master/Swiita/enums%2C%20Structs/SwiitaAuthority.swift) for details.)  
+It only accepts value of type [`QiitaAPIAuthority`](https://github.com/Enchan1207/Swiita/blob/master/Swiita/enums%2C%20Structs/SwiitaAuthority.swift).    
 
 ### Instance initialization
 
@@ -69,19 +68,21 @@ Swiita(clientid: "{client id}", clientsecret: "{client secret}", apihost: "{api 
 ```
 
 **NOTE: about parameter `apihost`:**
-Using Qiita API as general user,  you don't have to set it.
-But if you use it as Qiita Team,  you need set this parameter to `{team name}.qiita.com`.
+~~Using Qiita API as general user,  you don't have to set it.~~  
+~~But if you use it as Qiita Team,  you need set this parameter to `{team name}.qiita.com`.~~  
+**Qiita Team APIs authentication needs other API endpoint. It may be supported, but it's currently unavailable.**  
 
 ### API Request / Response
 
 Being finished api requests without any errors, the callback function `success(HTTPStatusType, JSONObject)` will be performed.  
-"HTTPStatusType" is enum which has response type of API request(e.g. *Successful*).  
-"JSONObject" is parsed JSON object from API response.
+
+[`HTTPStatusType`](https://github.com/Enchan1207/Swiita/blob/master/Swiita/enums%2C%20Structs/HTTPStatusType.swift) is enum which has response type of API request(e.g. *Successful*).  
+[`JSONObject`](https://github.com/Enchan1207/Swiita/blob/master/Swiita/JSONObject.swift) is parsed JSON object from API response.
 
 ### Pagination
 
 Some Qiita API accepts parameter "page" and "per_page".  
-and those responses header has `Total-Count`, but currently version can't check this value.  
+and those responses header includes informations about paging, but currently version can't check this value.  
 
 ## About Qiita Team
 

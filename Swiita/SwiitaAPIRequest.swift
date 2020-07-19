@@ -8,9 +8,9 @@
 
 import Foundation
 
-extension Swiita {
+internal extension Swiita {
     // 汎用APIリクエスト
-    internal func apiRequest(
+    func apiRequest(
         token: String? = nil,
         apiPath: String,
         requestParams: [String: String]? = nil,
@@ -37,7 +37,7 @@ extension Swiita {
     }
     
     // SuccessCallback, FailCallbackに対応した型で返す
-    internal func apiRequest(
+    func apiRequest(
         token: String? = nil,
         apiPath: String,
         requestParams: [String: String]? = nil,
@@ -57,7 +57,7 @@ extension Swiita {
     }
     
     // JSON形式のリクエストボディを受け取り、エンコードしてリクエスト
-    internal func apiRequest<T: Codable>(
+    func apiRequest<T: Codable>(
         token: String? = nil,
         apiPath: String,
         requestParams: [String: String]? = nil,

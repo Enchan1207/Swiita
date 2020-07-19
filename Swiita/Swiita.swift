@@ -22,6 +22,12 @@ public class Swiita {
     internal var safariViewController: SFSafariViewController!
     internal var notifyProtocol: NSObjectProtocol?
     
+    /// Generate Instance.
+    /// - Parameters:
+    ///     - clientid: Qiita API client ID
+    ///     - clientsecret: Qiita API client secret
+    ///     - apihost: Qiita API hostname.
+    ///     - token: Access token string
     public init(clientid: String, clientsecret: String, apihost: URL? = nil, token: String? = nil) {
         self.clientid = clientid
         self.clientsecret = clientsecret
