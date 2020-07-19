@@ -13,8 +13,8 @@ public enum JSONObject: Equatable {
     case string(String)
     case number(Double)
     case bool(Bool)
-    case array(Array<JSONObject>)
-    case object(Dictionary<String, JSONObject>)
+    case array([JSONObject])
+    case object([String: JSONObject])
     case invalid
     case null
     
@@ -61,7 +61,7 @@ public enum JSONObject: Equatable {
     }
     
     // 適切な列挙型の値にキャストして返すイニシャライザ
-    public init(_ value: Any){
+    public init(_ value: Any) {
         switch value {
         //  jsonが扱うデータ型
         case let string as String:
@@ -75,10 +75,10 @@ public enum JSONObject: Equatable {
             self = .bool(bool)
             
         case let nsarray as NSArray:
-            self = .array(nsarray.map( {JSONObject($0)} ))
+            self = .array(nsarray.map({ JSONObject($0) }))
             
         case let array as [Any]:
-            self = .array(array.map( {JSONObject($0)} ))
+            self = .array(array.map({ JSONObject($0) }))
             
         case let dictionary as [String: Any]:
             self = .object(dictionary.mapValues { JSONObject($0) })
@@ -92,7 +92,7 @@ public enum JSONObject: Equatable {
             }
             self = JSONObject(decoded)
             
-        case _ as Optional<Any>:
+        case _ as Any?:
             self = .null
             
         default:
@@ -104,14 +104,14 @@ public enum JSONObject: Equatable {
     // JSON文字列から変換できるように
     public init?(json: String, encoding: String.Encoding = .utf8) {
         self.init(json.data(using: encoding) as Any)
-        if self == .invalid{
+        if self == .invalid {
             return nil
         }
     }
     
     // JSONEncoderでエンコードした構造体も入力できるように
-    public init?<T: Encodable>(json: T, encoding: String.Encoding = .utf8){
-        guard let encodedObject = try? JSONEncoder().encode(json) else {return nil}
+    public init?<T: Encodable>(json: T, encoding: String.Encoding = .utf8) {
+        guard let encodedObject = try? JSONEncoder().encode(json) else { return nil }
         self.init(String(data: encodedObject, encoding: encoding) as Any)
     }
     

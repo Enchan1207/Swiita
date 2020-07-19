@@ -16,9 +16,9 @@ public extension Swiita {
     func addStock (
         itemID: String,
         success: SuccessCallback? = nil,
-        failure: FailCallback? = nil){
+        failure: FailCallback? = nil) {
         
-        apiRequest(apiPath: "/api/v2/items/\(itemID)/stock", method: .GET, success: { success?($0, $1)}) {failure?($0)}
+        apiRequest(apiPath: "/api/v2/items/\(itemID)/stock", method: .GET, success: { success?($0, $1) }) { failure?($0) }
     }
     
     /// remove stocked article.
@@ -27,9 +27,9 @@ public extension Swiita {
     func removeStock (
         itemID: String,
         success: SuccessCallback? = nil,
-        failure: FailCallback? = nil){
+        failure: FailCallback? = nil) {
         
-        apiRequest(apiPath: "/api/v2/items/\(itemID)/stock", method: .DELETE, success: { success?($0, $1)}) {failure?($0)}
+        apiRequest(apiPath: "/api/v2/items/\(itemID)/stock", method: .DELETE, success: { success?($0, $1) }) { failure?($0) }
     }
     
     /// check if the article is stocked.
@@ -38,8 +38,8 @@ public extension Swiita {
     func isStocked (
         itemID: String,
         success: SuccessCallback? = nil,
-        failure: FailCallback? = nil){
+        failure: FailCallback? = nil) {
         
-        apiRequest(apiPath: "/api/v2/items/\(itemID)/stock", method: .GET, success: { success?($0, $1)}) {failure?($0)}
+        apiRequest(apiPath: "/api/v2/items/\(itemID)/stock", method: .GET, success: { success?($0, $1) }) { failure?($0) }
     }
 }

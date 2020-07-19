@@ -17,10 +17,10 @@ public extension Swiita {
     /// - Parameters:
     ///   - URLContexts: `openURLContexts` in `SceneDelegate.swift`
     ///   - callBack: callback URL registed Qiita
-    static func handleCallback(URLContexts: Set<UIOpenURLContext>, callBack: URL){
+    static func handleCallback(URLContexts: Set<UIOpenURLContext>, callBack: URL) {
         // QiitaKitのコールバックURLなら認証画面を閉じるリクエストと判断、NotificationCenterで通知
         guard let url = URLContexts.first?.url else { return }
-        if callBack.host == url.host{
+        if callBack.host == url.host {
             NotificationCenter.default.post(Notification(name: .qiitaKitAuthCallback, object: nil, userInfo: ["callbackURL": url]))
         }
     }
@@ -32,7 +32,7 @@ public extension Swiita {
     ///   - authority: the access  authority of Qiita APIs
     ///   - success: callback when authenticate succeeded.
     ///   - failure: callback when authenticate failed.
-    func authorize(presentViewController: UIViewController?, safariDelegate: SFSafariViewControllerDelegate? = nil, authority: [qiitaAPIAuthority], success: @escaping (_ token: String) -> Void, failure: @escaping (_ error: Error) -> Void){
+    func authorize(presentViewController: UIViewController?, safariDelegate: SFSafariViewControllerDelegate? = nil, authority: [QiitaAPIAuthority], success: @escaping (_ token: String) -> Void, failure: @escaping (_ error: Error) -> Void) {
         
         /// TODO: CSRF対策文字列の生成方法
         let state = NSUUID().uuidString.regexReplace(pattern: "-", replace: "")
@@ -78,15 +78,16 @@ public extension Swiita {
     }
     
     // code, stateからアクセストークンを引っ張る
-    internal func generateAccessToken(code: String, clientState: String, responseState:String, success: @escaping (_ token: String) -> Void, failure: @escaping (_ error: Error) -> Void) {
+    internal func generateAccessToken(code: String, clientState: String, responseState: String, success: @escaping (_ token: String) -> Void, failure: @escaping (_ error: Error) -> Void) {
         // CSRF的に問題なければ、codeを認証情報としてアクセストークンを取得
-        if (state != self.state) { return }
+        if state != self.state { return }
         struct TokenRequestParams: Codable {
             let client_id: String
             let client_secret: String
             let code: String
         }
-        let requestBody = String(data: try! JSONEncoder().encode(TokenRequestParams(client_id: self.clientid, client_secret: self.clientsecret, code: code)), encoding: .utf8)!
+        guard let encodedToken = try? JSONEncoder().encode(TokenRequestParams(client_id: self.clientid, client_secret: self.clientsecret, code: code)) else { return }
+        let requestBody = String(data: encodedToken, encoding: .utf8)!
         
         let url = self.apihost.appendingPathComponent("/api/v2/access_tokens")
         var request = URLRequest(url: url)
@@ -95,14 +96,14 @@ public extension Swiita {
         request.httpBody = requestBody.data(using: .utf8)
         
         let session = URLSession.shared
-        session.dataTask(with: request) { (data, response, error) in
+        session.dataTask(with: request) { (data, _, error) in
             if let error = error {
                 failure(error)
-            }else{
+            } else {
                 if let accessTokenStr = String(data: data!, encoding: .utf8) {
                     struct AccessToken: Codable {
                         let client_id: String
-                        let scopes: [qiitaAPIAuthority]
+                        let scopes: [QiitaAPIAuthority]
                         let token: String
                     }
                     let token = try? JSONDecoder().decode(AccessToken.self, from: accessTokenStr.data(using: .utf8)!)
@@ -119,15 +120,15 @@ public extension Swiita {
     func deleteAccessToken(
         token: String,
         success: SuccessCallback? = nil,
-        failure: FailCallback? = nil){
+        failure: FailCallback? = nil) {
         
-        apiRequest(apiPath: "/api/v2/access_tokens/\(token)", method: .DELETE, success: { success?($0, $1)}) {failure?($0)}
+        apiRequest(apiPath: "/api/v2/access_tokens/\(token)", method: .DELETE, success: { success?($0, $1) }) { failure?($0) }
     }
     
     /// Get authorized user.
     func getAuthorizedUser(success: SuccessCallback? = nil,
-                           failure: FailCallback? = nil){
+                           failure: FailCallback? = nil) {
         
-        apiRequest(apiPath: "/api/v2/authenticated_user", success: { success?($0, $1)}) {failure?($0)}
+        apiRequest(apiPath: "/api/v2/authenticated_user", success: { success?($0, $1) }) { failure?($0) }
     }
 }

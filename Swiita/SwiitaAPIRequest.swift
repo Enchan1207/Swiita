@@ -16,7 +16,7 @@ extension Swiita {
         requestParams: [String: String]? = nil,
         requestBody: String? = nil,
         method: HTTPMethod? = .GET,
-        completion: @escaping (_ data: Data?, _ response: URLResponse?, _ error: Error?) -> Void){
+        completion: @escaping (_ data: Data?, _ response: URLResponse?, _ error: Error?) -> Void) {
         
         let url = self.apihost.appendingPathComponent(apiPath).setParams(requestParams)
         var request = URLRequest(url: url!)
@@ -43,14 +43,14 @@ extension Swiita {
         requestParams: [String: String]? = nil,
         requestBody: String? = nil,
         method: HTTPMethod? = .GET,
-        success: SuccessCallback?, failure: FailCallback?){
+        success: SuccessCallback?, failure: FailCallback?) {
         
         apiRequest(token: token, apiPath: apiPath, requestParams: requestParams, requestBody: requestBody, method: method) { (data, response, error) in
             if error == nil {
                 let responseString = String(data: data!, encoding: .utf8) ?? "{}"
                 let statusCode = (response as? HTTPURLResponse)?.typeOfStatusCode()
                 success?(statusCode ?? .Invalid, JSONObject(responseString.data(using: .utf8) as Any))
-            }else{
+            } else {
                 failure?(error!)
             }
         }
@@ -63,12 +63,12 @@ extension Swiita {
         requestParams: [String: String]? = nil,
         requestBodyStruct: T? = nil,
         method: HTTPMethod? = .GET,
-        success: SuccessCallback?, failure: FailCallback?){
+        success: SuccessCallback?, failure: FailCallback?) {
         
         guard let encodedStruct = try? JSONEncoder().encode(requestBodyStruct) else { return }
         let requestBody = String(data: encodedStruct, encoding: .utf8)
         
-        apiRequest(token: token, apiPath: apiPath, requestParams: requestParams, requestBody: requestBody, method: method, success: { success?($0, $1) }, failure: {failure?($0)} )
+        apiRequest(token: token, apiPath: apiPath, requestParams: requestParams, requestBody: requestBody, method: method, success: { success?($0, $1) }, failure: { failure?($0) })
         
     }
     

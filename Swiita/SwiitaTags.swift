@@ -19,10 +19,10 @@ public extension Swiita {
         page: Int = 1,
         perpage: Int = 20,
         success: SuccessCallback? = nil,
-        failure: FailCallback? = nil){
+        failure: FailCallback? = nil) {
         let requestParams = ["page": "\(page)", "per_page": "\(perpage)"]
         
-        apiRequest(apiPath: "/api/v2/tags/\(tagID)/items", requestParams: requestParams, method: .GET, success: { success?($0, $1)}) {failure?($0)}
+        apiRequest(apiPath: "/api/v2/tags/\(tagID)/items", requestParams: requestParams, method: .GET, success: { success?($0, $1) }) { failure?($0) }
     }
     
     /// get all tags.
@@ -34,10 +34,10 @@ public extension Swiita {
         perpage: Int = 20,
         sort: String = "count",
         success: SuccessCallback? = nil,
-        failure: FailCallback? = nil){
+        failure: FailCallback? = nil) {
         let requestParams = ["page": "\(page)", "per_page": "\(perpage)", "sort": sort]
         
-        apiRequest(apiPath: "/api/v2/tags", requestParams: requestParams, method: .GET, success: { success?($0, $1)}) {failure?($0)}
+        apiRequest(apiPath: "/api/v2/tags", requestParams: requestParams, method: .GET, success: { success?($0, $1) }) { failure?($0) }
     }
     
     /// get tag by id.
@@ -46,9 +46,9 @@ public extension Swiita {
     func getTag (
         tagID: String,
         success: SuccessCallback? = nil,
-        failure: FailCallback? = nil){
+        failure: FailCallback? = nil) {
         
-        apiRequest(apiPath: "/api/v2/tags/\(tagID)", method: .GET, success: { success?($0, $1)}) {failure?($0)}
+        apiRequest(apiPath: "/api/v2/tags/\(tagID)", method: .GET, success: { success?($0, $1) }) { failure?($0) }
     }
     
     /// get following tags.
@@ -61,10 +61,10 @@ public extension Swiita {
         page: Int = 1,
         perpage: Int = 20,
         success: SuccessCallback? = nil,
-        failure: FailCallback? = nil){
+        failure: FailCallback? = nil) {
         let requestParams = ["page": "\(page)", "per_page": "\(perpage)"]
         
-        apiRequest(apiPath: "/api/v2/users/\(userID)/following_tags", requestParams: requestParams, method: .GET, success: { success?($0, $1)}) {failure?($0)}
+        apiRequest(apiPath: "/api/v2/users/\(userID)/following_tags", requestParams: requestParams, method: .GET, success: { success?($0, $1) }) { failure?($0) }
     }
     
     /// unfollow tag.
@@ -73,9 +73,9 @@ public extension Swiita {
     func unFollowTag (
         tagID: String,
         success: SuccessCallback? = nil,
-        failure: FailCallback? = nil){
+        failure: FailCallback? = nil) {
         
-        apiRequest(apiPath: "/api/v2/tags/\(tagID)/following", method: .DELETE, success: { success?($0, $1)}) {failure?($0)}
+        apiRequest(apiPath: "/api/v2/tags/\(tagID)/following", method: .DELETE, success: { success?($0, $1) }) { failure?($0) }
     }
     
     /// follow tag.
@@ -84,9 +84,9 @@ public extension Swiita {
     func followTag (
         tagID: String,
         success: SuccessCallback? = nil,
-        failure: FailCallback? = nil){
+        failure: FailCallback? = nil) {
         
-        apiRequest(apiPath: "/api/v2/tags/\(tagID)/following", method: .PUT, success: { success?($0, $1)}) {failure?($0)}
+        apiRequest(apiPath: "/api/v2/tags/\(tagID)/following", method: .PUT, success: { success?($0, $1) }) { failure?($0) }
     }
     
     /// check if the tag is followed.
@@ -95,8 +95,8 @@ public extension Swiita {
     func isTagFollowed (
         tagID: String,
         success: SuccessCallback? = nil,
-        failure: FailCallback? = nil){
+        failure: FailCallback? = nil) {
         
-        apiRequest(apiPath: "/api/v2/tags/\(tagID)/following", method: .GET, success: { success?($0, $1)}) {failure?($0)}
+        apiRequest(apiPath: "/api/v2/tags/\(tagID)/following", method: .GET, success: { success?($0, $1) }) { failure?($0) }
     }
 }

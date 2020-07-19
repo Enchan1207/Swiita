@@ -9,7 +9,7 @@
 import Foundation
 import SafariServices
 
-public class Swiita{
+public class Swiita {
     public typealias SuccessCallback = (_ statusCode: HTTPStatusType, _ response: JSONObject) -> Void
     public typealias FailCallback = (_ error: Error) -> Void
     
@@ -22,7 +22,7 @@ public class Swiita{
     internal var safariViewController: SFSafariViewController!
     internal var notifyProtocol: NSObjectProtocol?
     
-    public init(clientid: String, clientsecret: String, apihost: URL? = nil, token: String? = nil){
+    public init(clientid: String, clientsecret: String, apihost: URL? = nil, token: String? = nil) {
         self.clientid = clientid
         self.clientsecret = clientsecret
         self.apihost = apihost ?? URL(string: "https://qiita.com")!

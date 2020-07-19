@@ -10,7 +10,7 @@ import Foundation
 
 extension HTTPURLResponse {
     // レスポンス中のステータスコードの種別を返す
-    func typeOfStatusCode() -> HTTPStatusType{
+    func typeOfStatusCode() -> HTTPStatusType {
         switch self.statusCode {
         case 100...199:
             return .Information

@@ -16,9 +16,9 @@ public extension Swiita {
     func getComment (
         commentID: String,
         success: SuccessCallback? = nil,
-        failure: FailCallback? = nil){
+        failure: FailCallback? = nil) {
         
-        apiRequest(apiPath: "/api/v2/comments/\(commentID)", method: .GET, success: { success?($0, $1)}) {failure?($0)}
+        apiRequest(apiPath: "/api/v2/comments/\(commentID)", method: .GET, success: { success?($0, $1) }) { failure?($0) }
     }
     
     /// delete comment.
@@ -27,9 +27,9 @@ public extension Swiita {
     func removeComment (
         commentID: String,
         success: SuccessCallback? = nil,
-        failure: FailCallback? = nil){
+        failure: FailCallback? = nil) {
         
-        apiRequest(apiPath: "/api/v2/comments/\(commentID)", method: .DELETE, success: { success?($0, $1)}) {failure?($0)}
+        apiRequest(apiPath: "/api/v2/comments/\(commentID)", method: .DELETE, success: { success?($0, $1) }) { failure?($0) }
     }
     
     /// update comment.
@@ -40,9 +40,9 @@ public extension Swiita {
         commentID: String,
         content: String,
         success: SuccessCallback? = nil,
-        failure: FailCallback? = nil){
+        failure: FailCallback? = nil) {
         let commentBody = "{ \"body\": \"\(content)\"}"
-        apiRequest(apiPath: "/api/v2/comments/\(commentID)", requestBody: commentBody, method: .PATCH, success: { success?($0, $1)}) {failure?($0)}
+        apiRequest(apiPath: "/api/v2/comments/\(commentID)", requestBody: commentBody, method: .PATCH, success: { success?($0, $1) }) { failure?($0) }
     }
     
     /// get comment posted the article.
@@ -51,9 +51,9 @@ public extension Swiita {
     func getPostedComment (
         itemID: String,
         success: SuccessCallback? = nil,
-        failure: FailCallback? = nil){
+        failure: FailCallback? = nil) {
         
-        apiRequest(apiPath: "/api/v2/items/\(itemID)/comments", method: .GET, success: { success?($0, $1)}) {failure?($0)}
+        apiRequest(apiPath: "/api/v2/items/\(itemID)/comments", method: .GET, success: { success?($0, $1) }) { failure?($0) }
     }
     
     /// post comment to the article.
@@ -64,8 +64,8 @@ public extension Swiita {
         itemID: String,
         content: String,
         success: SuccessCallback? = nil,
-        failure: FailCallback? = nil){
+        failure: FailCallback? = nil) {
         let commentBody = "{ \"body\": \"\(content)\"}"
-        apiRequest(apiPath: "/api/v2/items/\(itemID)/comments", requestBody: commentBody, method: .POST, success: { success?($0, $1)}) {failure?($0)}
+        apiRequest(apiPath: "/api/v2/items/\(itemID)/comments", requestBody: commentBody, method: .POST, success: { success?($0, $1) }) { failure?($0) }
     }
 }

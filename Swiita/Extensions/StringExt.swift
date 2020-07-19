@@ -10,7 +10,7 @@ import Foundation
 
 extension String {
     // 正規表現置換
-    func regexReplace(pattern: String, replace: String) -> String{
+    func regexReplace(pattern: String, replace: String) -> String {
         return self.replacingOccurrences(of: pattern, with: replace, options: .regularExpression, range: self.range(of: self))
     }
     

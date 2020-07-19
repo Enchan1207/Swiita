@@ -9,7 +9,7 @@
 import Foundation
 
 public extension Swiita {
-    public struct ArticleTag: Codable {
+    struct ArticleTag: Codable {
         let name: String
         let versions: [String]
         

@@ -8,7 +8,7 @@
 
 import Foundation
 
-public enum qiitaAPIAuthority: String, Codable {
+public enum QiitaAPIAuthority: String, Codable {
     case read = "read_qiita"
     case write = "write_qiita"
     case readTeam = "read_qiita_team"

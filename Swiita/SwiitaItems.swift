@@ -18,10 +18,10 @@ public extension Swiita {
         page: Int = 1,
         perpage: Int = 20,
         success: SuccessCallback? = nil,
-        failure: FailCallback? = nil){
+        failure: FailCallback? = nil) {
         let requestParams = ["page": "\(page)", "per_page": "\(perpage)"]
         
-        apiRequest(apiPath: "/api/v2/authenticated_user/items", requestParams: requestParams, method: .GET, success: { success?($0, $1)}) {failure?($0)}
+        apiRequest(apiPath: "/api/v2/authenticated_user/items", requestParams: requestParams, method: .GET, success: { success?($0, $1) }) { failure?($0) }
     }
     
     /// search articles by query.
@@ -34,10 +34,10 @@ public extension Swiita {
         page: Int = 1,
         perpage: Int = 20,
         success: SuccessCallback? = nil,
-        failure: FailCallback? = nil){
+        failure: FailCallback? = nil) {
         let requestParams = ["page": "\(page)", "per_page": "\(perpage)", "query": "\(query)"]
         
-        apiRequest(apiPath: "/api/v2/items", requestParams: requestParams, method: .GET, success: { success?($0, $1)}) {failure?($0)}
+        apiRequest(apiPath: "/api/v2/items", requestParams: requestParams, method: .GET, success: { success?($0, $1) }) { failure?($0) }
     }
     
     /// create and post article.
@@ -46,9 +46,9 @@ public extension Swiita {
     func createArticle (
         article: QiitaArticle,
         success: SuccessCallback? = nil,
-        failure: FailCallback? = nil){
+        failure: FailCallback? = nil) {
         
-        apiRequest(apiPath: "/api/v2/items", requestBodyStruct: article, method: .POST, success: { success?($0, $1)}) {failure?($0)}
+        apiRequest(apiPath: "/api/v2/items", requestBodyStruct: article, method: .POST, success: { success?($0, $1) }) { failure?($0) }
     }
     
     /// get article.
@@ -57,9 +57,9 @@ public extension Swiita {
     func getArticle (
         itemID: String,
         success: SuccessCallback? = nil,
-        failure: FailCallback? = nil){
+        failure: FailCallback? = nil) {
         
-        apiRequest(apiPath: "/api/v2/items/\(itemID)", method: .GET, success: { success?($0, $1)}) {failure?($0)}
+        apiRequest(apiPath: "/api/v2/items/\(itemID)", method: .GET, success: { success?($0, $1) }) { failure?($0) }
     }
     
     /// remove article.
@@ -68,9 +68,9 @@ public extension Swiita {
     func removeArticle (
         itemID: String,
         success: SuccessCallback? = nil,
-        failure: FailCallback? = nil){
+        failure: FailCallback? = nil) {
         
-        apiRequest(apiPath: "/api/v2/items/\(itemID)", method: .DELETE, success: { success?($0, $1)}) {failure?($0)}
+        apiRequest(apiPath: "/api/v2/items/\(itemID)", method: .DELETE, success: { success?($0, $1) }) { failure?($0) }
     }
     
     /// update article.
@@ -81,9 +81,9 @@ public extension Swiita {
         itemID: String,
         newArticle: QiitaArticle,
         success: SuccessCallback? = nil,
-        failure: FailCallback? = nil){
+        failure: FailCallback? = nil) {
         
-        apiRequest(apiPath: "/api/v2/items/\(itemID)", method: .PATCH, success: { success?($0, $1)}) {failure?($0)}
+        apiRequest(apiPath: "/api/v2/items/\(itemID)", method: .PATCH, success: { success?($0, $1) }) { failure?($0) }
     }
 
     /// get the user-posted articles.
@@ -96,10 +96,10 @@ public extension Swiita {
         page: Int = 1,
         perpage: Int = 20,
         success: SuccessCallback? = nil,
-        failure: FailCallback? = nil){
+        failure: FailCallback? = nil) {
         let requestParams = ["page": "\(page)", "per_page": "\(perpage)"]
         
-        apiRequest(apiPath: "/api/v2/users/\(userID)/items", requestParams: requestParams, method: .GET, success: { success?($0, $1)}) {failure?($0)}
+        apiRequest(apiPath: "/api/v2/users/\(userID)/items", requestParams: requestParams, method: .GET, success: { success?($0, $1) }) { failure?($0) }
     }
     
     /// get user-stocked articles.
@@ -108,8 +108,8 @@ public extension Swiita {
     func getUserStockedArticles (
         userID: String,
         success: SuccessCallback? = nil,
-        failure: FailCallback? = nil){
+        failure: FailCallback? = nil) {
         
-        apiRequest(apiPath: "/api/v2/users/\(userID)/stocks", method: .GET, success: { success?($0, $1)}) {failure?($0)}
+        apiRequest(apiPath: "/api/v2/users/\(userID)/stocks", method: .GET, success: { success?($0, $1) }) { failure?($0) }
     }
 }
