@@ -17,7 +17,7 @@ For installing, please add it to `Cartfile` of your project.
 
 ## Usage
 
-### Application registor
+### Application regist
 
 First, go [Register the application - Qiita](https://qiita.com/settings/applications/new) to regist your Application.  
 In "Callback URL", set the custom URL scheme for launching your application.(e.g. *swiita-testapplication*)  
@@ -46,6 +46,10 @@ swiita.authorize(presentViewController: self, authority: [.read], success: { (to
 }
 ```
 
+In "authority", you can set access tokens authority.  
+It only accepts value of type `QiitaAPIAuthority`.  
+([SwiitaAuthority.swift](https://github.com/Enchan1207/Swiita/blob/master/Swiita/enums%2C%20Structs/SwiitaAuthority.swift) for details.)  
+
 ### Instance initialization
 
 To initialize instance, you need those params.
@@ -68,10 +72,18 @@ Swiita(clientid: "{client id}", clientsecret: "{client secret}", apihost: "{api 
 Using Qiita API as general user,  you don't have to set it.
 But if you use it as Qiita Team,  you need set this parameter to `{team name}.qiita.com`.
 
+### API Request / Response
 
-### API Request
+Being finished api requests without any errors, the callback function `success(HTTPStatusType, JSONObject)` will be performed.  
+"HTTPStatusType" is enum which has response type of API request(e.g. *Successful*).  
+"JSONObject" is parsed JSON object from API response.
 
-under construction...
+### Pagination
 
+Some Qiita API accepts parameter "page" and "per_page".  
+and those responses header has `Total-Count`, but currently version can't check this value.  
 
+## About Qiita Team
 
+Now, this framework doesn't support "Qiita Team"s APIs.  
+(Not belonging any qiita team, so I can't implement and debug those.)
