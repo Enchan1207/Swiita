@@ -1,7 +1,6 @@
 SwiitaTests/*
 SwiitaTestApp/*
 vendor/*
-fastlane/*
 Gemfile
 Gemfile.lock
 .bundle/*
