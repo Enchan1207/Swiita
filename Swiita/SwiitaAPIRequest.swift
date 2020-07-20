@@ -49,6 +49,11 @@ internal extension Swiita {
             if error == nil {
                 let responseString = String(data: data!, encoding: .utf8) ?? "{}"
                 let statusCode = (response as? HTTPURLResponse)?.typeOfStatusCode()
+                /*
+                // TODO: ヘッダの処理どうしよう?
+                let responseHeader = (response as? HTTPURLResponse)?.allHeaderFields
+                print(responseHeader)
+                */
                 success?(statusCode ?? .Invalid, JSONObject(responseString.data(using: .utf8) as Any))
             } else {
                 failure?(error!)
