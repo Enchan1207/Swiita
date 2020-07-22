@@ -5,3 +5,7 @@ Gemfile
 Gemfile.lock
 .bundle/*
 Carthage/*
+
+fastlane/report.xml
+fastlane/test_output/report.html
+fastlane/test_output/report.junit
