@@ -1,7 +1,18 @@
+# ignoring...
 
+# application for test Swiita
 SwiitaTestApp/*
+
+# files
+
+# fastlane, bundle
 vendor/*
 Gemfile
 Gemfile.lock
 .bundle/*
+
+# carthage
 Carthage/*
+
+# SPM
+.build/
