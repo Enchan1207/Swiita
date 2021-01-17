@@ -15,6 +15,6 @@ public enum HTTPStatusType {
     case Redirects
     case ClientErrors
     case ServerErrors
-    
+
     case Invalid
 }

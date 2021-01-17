@@ -26,6 +26,11 @@ let package = Package(
             dependencies: [],
             path: "Swiita",
             exclude: ["Info.plist"]
+        ),
+        .testTarget(
+            name: "Tests",
+            dependencies: ["Swiita"],
+            path: "SwiitaTests"
         )
     ]
 )
