@@ -17,7 +17,7 @@ public enum JSONObject: Equatable {
     case object([String: JSONObject])
     case invalid
     case null
-    
+
     // 各型の中身を取り出す
     public var string: String? {
         guard case .string(let string) = self else { return nil }
@@ -47,42 +47,42 @@ public enum JSONObject: Equatable {
         guard case .object(let object) = self else { return nil }
         return object
     }
-    
+
     // 配列としてJSONObjectが呼び出された場合
     public subscript(_ index: Int) -> JSONObject {
         guard case .array(let array) = self else { return .null }
         return array[index]
     }
-    
+
     // キーバリューとしてJSONObjectが呼び出された場合
     public subscript(_ key: String) -> JSONObject {
         guard case .object(let object) = self else { return .null }
         return object[key] ?? .null
     }
-    
+
     // 適切な列挙型の値にキャストして返すイニシャライザ
     public init(_ value: Any) {
         switch value {
         //  jsonが扱うデータ型
         case let string as String:
             self = .string(string)
-            
+
         // 可能なら型キャスト
         case let number as Double:
             self = .number(number)
-            
+
         case let bool as Bool:
             self = .bool(bool)
-            
+
         case let nsarray as NSArray:
             self = .array(nsarray.map({ JSONObject($0) }))
-            
+
         case let array as [Any]:
             self = .array(array.map({ JSONObject($0) }))
-            
+
         case let dictionary as [String: Any]:
             self = .object(dictionary.mapValues { JSONObject($0) })
-            
+
         // パースされていないJSON文字列のData
         case let rawJsonData as Data:
             guard let decoded = try? JSONSerialization.jsonObject(with: rawJsonData, options: []) as? [String: Any] else {
@@ -91,16 +91,16 @@ public enum JSONObject: Equatable {
                 return
             }
             self = JSONObject(decoded)
-            
+
         case _ as Any?:
             self = .null
-            
+
         default:
             self = .invalid
-            
+
         }
     }
-    
+
     // JSON文字列から変換できるように
     public init?(json: String, encoding: String.Encoding = .utf8) {
         self.init(json.data(using: encoding) as Any)
@@ -108,11 +108,11 @@ public enum JSONObject: Equatable {
             return nil
         }
     }
-    
+
     // JSONEncoderでエンコードした構造体も入力できるように
     public init?<T: Encodable>(json: T, encoding: String.Encoding = .utf8) {
         guard let encodedObject = try? JSONEncoder().encode(json) else { return nil }
         self.init(String(data: encodedObject, encoding: encoding) as Any)
     }
-    
+
 }

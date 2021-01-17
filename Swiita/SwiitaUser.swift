@@ -16,10 +16,10 @@ public extension Swiita {
         itemID: String,
         success: SuccessCallback? = nil,
         failure: FailCallback? = nil) {
-        
+
         apiRequest(apiPath: "/api/v2/items/\(itemID)/stockers", method: .GET, success: { success?($0, $1) }) { failure?($0) }
     }
-    
+
     /// Get all users.
     /// - Parameters:
     ///     - page: page(**1 origin**)
@@ -30,10 +30,10 @@ public extension Swiita {
         success: SuccessCallback? = nil,
         failure: FailCallback? = nil) {
         let requestParams = ["page": "\(page)", "per_page": "\(perpage)"]
-        
+
         apiRequest(apiPath: "/api/v2/users", requestParams: requestParams, method: .GET, success: { success?($0, $1) }) { failure?($0) }
     }
-    
+
     /// Get user.
     /// - Parameters:
     ///     - userID: user ID.
@@ -41,10 +41,10 @@ public extension Swiita {
         userID: String,
         success: SuccessCallback? = nil,
         failure: FailCallback? = nil) {
-        
+
         apiRequest(apiPath: "/api/v2/users/\(userID)", method: .GET, success: { success?($0, $1) }) { failure?($0) }
     }
-    
+
     /// get following users.
     /// - Parameters:
     ///     - userID: target user id.
@@ -55,10 +55,10 @@ public extension Swiita {
         success: SuccessCallback? = nil,
         failure: FailCallback? = nil) {
         let requestParams = ["page": "\(page)", "per_page": "\(perpage)"]
-        
+
         apiRequest(apiPath: "/api/v2/users/\(userID)/followees", requestParams: requestParams, method: .GET, success: { success?($0, $1) }) { failure?($0) }
     }
-    
+
     /// get follower users.
     /// - Parameters:
     ///     - userID: target user id.
@@ -69,10 +69,10 @@ public extension Swiita {
         success: SuccessCallback? = nil,
         failure: FailCallback? = nil) {
         let requestParams = ["page": "\(page)", "per_page": "\(perpage)"]
-        
+
         apiRequest(apiPath: "/api/v2/users/\(userID)/followers", requestParams: requestParams, method: .GET, success: { success?($0, $1) }) { failure?($0) }
     }
-    
+
     /// unfollow user.
     /// - Parameters:
     ///     - userID: target user id.
@@ -80,10 +80,10 @@ public extension Swiita {
         userID: String,
         success: SuccessCallback? = nil,
         failure: FailCallback? = nil) {
-        
+
         apiRequest(apiPath: "/api/v2/users/\(userID)/following", method: .DELETE, success: { success?($0, $1) }) { failure?($0) }
     }
-    
+
     /// check if the user follow me.
     /// - Parameters:
     ///     - userID: target user id.
@@ -91,10 +91,10 @@ public extension Swiita {
         userID: String,
         success: SuccessCallback? = nil,
         failure: FailCallback? = nil) {
-        
+
         apiRequest(apiPath: "/api/v2/users/\(userID)/following", method: .GET, success: { success?($0, $1) }) { failure?($0) }
     }
-    
+
     /// follow user.
     /// - Parameters:
     ///     - userID: target user id.
@@ -102,15 +102,15 @@ public extension Swiita {
         userID: String,
         success: SuccessCallback? = nil,
         failure: FailCallback? = nil) {
-        
+
         apiRequest(apiPath: "/api/v2/users/\(userID)/following", method: .PUT, success: { success?($0, $1) }) { failure?($0) }
     }
-    
+
     /// get authenticated user(myself).
     func getAuthenticatedUser (
         success: SuccessCallback? = nil,
         failure: FailCallback? = nil) {
-        
+
         apiRequest(apiPath: "/api/v2/authenticated_user", method: .GET, success: { success?($0, $1) }) { failure?($0) }
     }
 }

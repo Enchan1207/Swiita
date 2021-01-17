@@ -13,5 +13,5 @@ extension String {
     func regexReplace(pattern: String, replace: String) -> String {
         return self.replacingOccurrences(of: pattern, with: replace, options: .regularExpression, range: self.range(of: self))
     }
-    
+
 }

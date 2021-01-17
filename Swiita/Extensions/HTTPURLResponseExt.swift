@@ -22,10 +22,10 @@ extension HTTPURLResponse {
             return .ClientErrors
         case 500...599:
             return .ServerErrors
-            
+
         default:
             return .Invalid
         }
-        
+
     }
 }

@@ -12,20 +12,24 @@ import SafariServices
 public class Swiita {
     public typealias SuccessCallback = (_ statusCode: HTTPStatusType, _ response: JSONObject) -> Void
     public typealias FailCallback = (_ error: Error) -> Void
-    
+
     internal let clientid: String
     internal let clientsecret: String
     internal let apihost: URL
     internal let token: String?
-    
+
     internal var state: String?
+
+    #if os(iOS)
     internal var safariViewController: SFSafariViewController!
+    #endif
+
     internal var notifyProtocol: NSObjectProtocol?
-    
+
     public convenience init() {
         self.init(clientid: "", clientsecret: "")
     }
-    
+
     /// Generate Instance.
     /// - Parameters:
     ///     - clientid: Qiita API client ID
@@ -38,7 +42,7 @@ public class Swiita {
         self.apihost = apihost ?? URL(string: "https://qiita.com")!
         self.token = token
     }
-    
+
     deinit {
         // 認証コールバック用のオブザーバを消す
         if let notifyProtocol = self.notifyProtocol {

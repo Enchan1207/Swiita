@@ -5,8 +5,8 @@ import PackageDescription
 
 let package = Package(
     name: "Swiita",
-    platforms:[
-        .iOS(.v13)
+    platforms: [
+        .iOS(.v9)
     ],
     products: [
         // Products define the executables and libraries a package produces, and make them visible to other packages.
@@ -27,5 +27,10 @@ let package = Package(
             path: "Swiita",
             exclude: ["Info.plist"]
         ),
+        .testTarget(
+            name: "Tests",
+            dependencies: ["Swiita"],
+            path: "SwiitaTests"
+        )
     ]
 )

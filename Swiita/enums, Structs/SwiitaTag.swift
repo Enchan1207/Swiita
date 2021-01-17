@@ -12,17 +12,17 @@ public extension Swiita {
     struct ArticleTag: Codable {
         let name: String
         let versions: [String]
-        
+
         /*
          example:
-         
+
          "tags": [
-           {
-             "name": "Ruby",
-             "versions": [
-               "0.0.1"
-             ]
-           }
+         {
+         "name": "Ruby",
+         "versions": [
+         "0.0.1"
+         ]
+         }
          ]
          */
     }
