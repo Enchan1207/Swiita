@@ -1,11 +1,20 @@
+# ignoring...
 
+# application for test Swiita
 SwiitaTestApp/*
+
+# files
+
+# fastlane, bundle
 vendor/*
 Gemfile
 Gemfile.lock
 .bundle/*
+fastlane/report.xml
+fastlane/test_output/*
+
+# carthage
 Carthage/*
 
-fastlane/report.xml
-fastlane/test_output/report.html
-fastlane/test_output/report.junit
+# SPM
+.build/
