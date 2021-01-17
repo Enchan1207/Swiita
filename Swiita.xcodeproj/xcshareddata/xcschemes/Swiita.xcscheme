@@ -20,6 +20,20 @@
                ReferencedContainer = "container:Swiita.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
+         <BuildActionEntry
+            buildForTesting = "YES"
+            buildForRunning = "NO"
+            buildForProfiling = "NO"
+            buildForArchiving = "NO"
+            buildForAnalyzing = "NO">
+            <BuildableReference
+               BuildableIdentifier = "primary"
+               BlueprintIdentifier = "9EC02F5A24C1D8ED00D9D077"
+               BuildableName = "SwiitaTests.xctest"
+               BlueprintName = "SwiitaTests"
+               ReferencedContainer = "container:Swiita.xcodeproj">
+            </BuildableReference>
+         </BuildActionEntry>
       </BuildActionEntries>
    </BuildAction>
    <TestAction
@@ -50,6 +64,32 @@
       debugDocumentVersioning = "YES"
       debugServiceExtension = "internal"
       allowLocationSimulation = "YES">
+      <MacroExpansion>
+         <BuildableReference
+            BuildableIdentifier = "primary"
+            BlueprintIdentifier = "9EC02F5124C1D8EC00D9D077"
+            BuildableName = "Swiita.framework"
+            BlueprintName = "Swiita"
+            ReferencedContainer = "container:Swiita.xcodeproj">
+         </BuildableReference>
+      </MacroExpansion>
+      <EnvironmentVariables>
+         <EnvironmentVariable
+            key = "QIITA_CLIENT_SECRET"
+            value = "$(QIITA_CLIENT_SECRET)"
+            isEnabled = "YES">
+         </EnvironmentVariable>
+         <EnvironmentVariable
+            key = "QIITA_ACCESS_TOKEN"
+            value = "$(QIITA_ACCESS_TOKEN)"
+            isEnabled = "YES">
+         </EnvironmentVariable>
+         <EnvironmentVariable
+            key = "QIITA_CLIENT_ID"
+            value = "$(QIITA_CLIENT_ID)"
+            isEnabled = "YES">
+         </EnvironmentVariable>
+      </EnvironmentVariables>
    </LaunchAction>
    <ProfileAction
       buildConfiguration = "Release"
