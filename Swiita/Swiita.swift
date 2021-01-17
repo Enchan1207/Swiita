@@ -19,7 +19,11 @@ public class Swiita {
     internal let token: String?
     
     internal var state: String?
-    internal var safariViewController: SFSafariViewController!
+    
+    #if os(iOS)
+        internal var safariViewController: SFSafariViewController!
+    #endif
+    
     internal var notifyProtocol: NSObjectProtocol?
     
     public convenience init() {

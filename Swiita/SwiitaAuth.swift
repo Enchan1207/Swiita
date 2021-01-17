@@ -6,6 +6,10 @@
 //  Copyright © 2020 EnchantCode. All rights reserved.
 //
 
+// UIKitはiOSでしか動かない
+// TODO: せめてmacOS対応を…
+#if os(iOS)
+
 import Foundation
 import UIKit
 import SafariServices
@@ -132,3 +136,5 @@ public extension Swiita {
         apiRequest(apiPath: "/api/v2/authenticated_user", success: { success?($0, $1) }) { failure?($0) }
     }
 }
+
+#endif
