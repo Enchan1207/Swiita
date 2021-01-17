@@ -1,7 +1,7 @@
 ![Swiita Icon](banner.png)
 
 [![latest release](https://img.shields.io/github/v/release/Enchan1207/Swiita)](https://github.com/Enchan1207/Swiita/releases)
-![travis CI](https://img.shields.io/travis/Enchan1207/Swiita)
+[![travis CI](https://img.shields.io/travis/Enchan1207/Swiita)](https://travis-ci.org/github/Enchan1207/Swiita)
 ![licence](https://img.shields.io/github/license/Enchan1207/Swiita)
 [![Carthage compatible](https://img.shields.io/badge/Carthage-compatible-4BC51D.svg?style=flat)](https://github.com/Enchan1207/Swiita)  
 
