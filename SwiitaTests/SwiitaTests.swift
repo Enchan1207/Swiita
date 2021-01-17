@@ -13,10 +13,26 @@ class SwiitaTests: XCTestCase {
 
     // 実行引数
     let environment = ProcessInfo.processInfo.environment
+    
+    // APIアクセス情報
+    var clientID: String? = nil
+    var clientSecret: String? = nil
+    var token: String? = nil
 
     // 初期設定
     override func setUpWithError() throws {
-        print(environment)
+        // 必要な情報が渡されているかチェック
+        let clientID = self.environment["QIITA_CLIENT_ID"]!
+        let clientSecret = self.environment["QIITA_CLIENT_SECRET"]!
+        let token = self.environment["QIITA_ACCESS_TOKEN"]!
+
+        guard (clientID != ""), (clientSecret != ""), (token != "") else {
+            fatalError("No environmental variables has been passed!")
+        }
+        
+        self.clientID = clientID
+        self.clientSecret = clientSecret
+        self.token = token
     }
 
     // テスト後の処理
