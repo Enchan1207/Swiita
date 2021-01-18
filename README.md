@@ -1,7 +1,6 @@
-![Swiita Icon](banner.png)
+<img src="banner.png" width="450">  
 
 [![latest release](https://img.shields.io/github/v/release/Enchan1207/Swiita)](https://github.com/Enchan1207/Swiita/releases)
-[![travis CI](https://img.shields.io/travis/Enchan1207/Swiita)](https://travis-ci.org/github/Enchan1207/Swiita)
 ![GitHub Actions CI](https://github.com/Enchan1207/Swiita/workflows/CI/badge.svg?branch=master)
 ![licence](https://img.shields.io/github/license/Enchan1207/Swiita)
 [![Carthage compatible](https://img.shields.io/badge/Carthage-compatible-4BC51D.svg?style=flat)](https://github.com/Enchan1207/Swiita)
@@ -11,9 +10,10 @@ Simple iOS Framework for Qiita API written in Swift.
 
 ## Installation
 
-Currently, Swiita only supports installation via Carthage.   
-For installing, please add it to `Cartfile` of your project.  
-`github "Enchan1207/Swiita"`  
+Currently, Swiita supports some way to installation shown below:
+
+ - Carthage
+ - Swift Package Manager
 
 ## Usage
 
