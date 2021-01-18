@@ -17,4 +17,9 @@ jobs:
       run: xcodebuild -sdk iphonesimulator -configuration Debug build 
       
     - name: Run tests
+      env:
+        QIITA_CLIENT_ID: ${{ secrets.QIITA_CLIENT_ID }}
+        QIITA_CLIENT_SECRET: ${{ secrets.QIITA_CLIENT_SECRET }}
+        QIITA_ACCESS_TOKEN: ${{ secrets.QIITA_ACCESS_TOKEN }}
+
       run: xcodebuild -scheme Swiita test -destination "name=iPhone 8" QIITA_CLIENT_ID=${QIITA_CLIENT_ID} QIITA_CLIENT_SECRET=${QIITA_CLIENT_ID} QIITA_ACCESS_TOKEN=${QIITA_ACCESS_TOKEN}
