@@ -80,6 +80,11 @@
             isEnabled = "YES">
          </EnvironmentVariable>
          <EnvironmentVariable
+            key = "SWIITA_VERSION"
+            value = "1.2.0"
+            isEnabled = "YES">
+         </EnvironmentVariable>
+         <EnvironmentVariable
             key = "QIITA_ACCESS_TOKEN"
             value = "$(QIITA_ACCESS_TOKEN)"
             isEnabled = "YES">
