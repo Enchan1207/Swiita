@@ -18,3 +18,4 @@ Carthage/*
 
 # SPM
 .build/
+build/
